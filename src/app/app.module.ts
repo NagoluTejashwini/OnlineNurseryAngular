@@ -12,13 +12,17 @@ import { AdminComponent } from './admin/admin.component';
 import { FormsModule } from '@angular/forms';
 import { CartComponent } from './cart/cart.component';
 import { CartChildComponent } from './cart-child/cart-child.component';
+import { PlanterComponent } from './planter/planter.component';
+import { PlantComponent } from './plant/plant.component';
 
 
 const appRoutes:Routes=[
   {path:'seed',component : SeedComponent},
   {path:'admin',component : AdminComponent},
   {path: 'view/:commonname', component: ViewSeedComponent},
-  {path:'cart', component: CartComponent}
+  {path:'cart', component: CartComponent},
+  {path:'planter', component:PlanterComponent},
+  {path:'plant', component:PlantComponent},
 ];
 
 
@@ -30,7 +34,9 @@ const appRoutes:Routes=[
     ViewSeedComponent,
     AdminComponent,
     CartComponent,
-    CartChildComponent
+    CartChildComponent,
+    PlanterComponent,
+    PlantComponent
   ],
   imports: [
     BrowserModule,
