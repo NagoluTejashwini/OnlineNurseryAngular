@@ -1,4 +1,7 @@
+import { Byte } from "@angular/compiler/src/util";
+
 export class SeedDetails {
+    pId:number;
     commonName:string;
     bloomTime:string;
     watering:string;
@@ -9,8 +12,9 @@ export class SeedDetails {
     seedsStock:string;
     seedsCost:string;
     seedsPerPacket:number;
-
+    
     constructor(
+        pId:number,
         commonName:string,
     bloomTime:string,
     watering:string,
@@ -21,8 +25,10 @@ export class SeedDetails {
     seedsStock:string,
     seedsCost:string,
     seedsPerPacket:number,
+    
         )
         {
+            this.pId=pId;
             this.commonName=commonName;
             this.bloomTime=bloomTime;
             this.watering=watering;
@@ -33,6 +39,7 @@ export class SeedDetails {
             this.seedsStock=seedsStock;
             this.seedsCost=seedsCost;
             this.seedsPerPacket=seedsPerPacket;
+           
         }
 
 

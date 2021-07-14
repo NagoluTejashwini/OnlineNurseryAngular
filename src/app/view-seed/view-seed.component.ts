@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { PlantDetails } from '../plant-details';
 import { ProductService } from '../product.service';
 import { SeedDetails } from '../seed-details';
 
@@ -9,19 +10,19 @@ import { SeedDetails } from '../seed-details';
   styleUrls: ['./view-seed.component.css']
 })
 export class ViewSeedComponent implements OnInit {
-  commonName:string;
+  
+  seedId:number;
   seed !: SeedDetails;
   constructor(private activatedRouter:ActivatedRoute, private  productService:ProductService) {
-    this.commonName = this.activatedRouter.snapshot.params['commonname'];
-    this.getSeedDetails(this.commonName);
+    this.seedId = this.activatedRouter.snapshot.params['seedId'];
+    this.getSeedDetails(this.seedId);
    }
-
+   
   ngOnInit(): void {
+    
   }
-
-  getSeedDetails(byName:string)
-  {
-    this.productService.getSeedByName(byName).subscribe(data=>{
+  getSeedDetails(seedId:number) {
+   this.productService.getSeedById(seedId).subscribe(data=>{
       this.seed = data;
   },
   err=>
@@ -31,5 +32,11 @@ export class ViewSeedComponent implements OnInit {
   
   );
   }
-
 }
+  
+ 
+  
+  
+ 
+//@charset "utf-8";
+//@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900|Rubik:300,400,500,700,900');

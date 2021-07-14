@@ -13,21 +13,18 @@
             <div class="product p-4">
               
             <div class="mt-4 mb-3">
-              <h5 class="text-uppercase">{{seed.commonName}} seeds</h5>
-              <div class="price d-flex flex-row align-items-center"> <span class="act-price">{{seed.seedsCost | currency : 'INR'}}</span>
+              <h5 class="text-uppercase">Height: {{planter.planterheight}} </h5>
+              <h5 class="text-uppercase">Shape: {{planter.planterShape}} </h5>
+              <div class="price d-flex flex-row align-items-center"> <span class="act-price">{{planter.planterCost | currency : 'INR'}}</span>
                   
               </div>
           </div>
-         <b> Description</b>
-          <p class="about">{{seed.seedsDescription}}</p>
-          
+         
           <hr>
           <b>Specifications</b><br>
-          Type:{{seed.typeOfSeeds}}<br>
-          Bloom time:{{seed.bloomTime}}<br>
-          Watering:{{seed.watering}}<br>
-          Difficulty level:{{seed.difficultyLevel}}<br>
-          Seeds per packet:{{seed.seedsPerPacket}}<br>
+          Capacity:{{planter.planterCapacity}}<br>
+          Drinage holes:{{planter.drinageHoles}}<br>
+         
 
           
           

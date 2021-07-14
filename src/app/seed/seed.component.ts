@@ -11,14 +11,13 @@ import { CartService } from '../cart.service';
 export class SeedComponent implements OnInit {
 
   seeds!: SeedDetails[];
-
+  viewSeed!:SeedDetails;
   constructor(
     private productService:ProductService,
     private cartService:CartService) {
       this.getAllSeeds();
   }
- 
-  
+
   ngOnInit(): void {
   }
   
@@ -32,10 +31,7 @@ export class SeedComponent implements OnInit {
   }
   
   );
-  //console.log(this.laptops.length);
   }
-
-
 
   share(name:string) {
      

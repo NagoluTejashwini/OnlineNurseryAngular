@@ -1,4 +1,5 @@
 export class PlantDetails {
+    pId:number;
     plantHeight:number;
     plantSpread:string;
     commonName:string;
@@ -11,7 +12,9 @@ export class PlantDetails {
 	plantStock:number;
 	plantCost:number;
 
-    constructor( plantHeight:number,
+    constructor( 
+        pId:number,
+        plantHeight:number,
         plantSpread:string,
         commonName:string,
         bloomTime:string,
@@ -22,7 +25,7 @@ export class PlantDetails {
         plantDescription:string,
         plantStock:number,
         plantCost:number){
-
+            this.pId=pId;
             this.plantHeight=plantHeight;
             this.plantSpread=plantSpread;
             this.commonName=commonName;

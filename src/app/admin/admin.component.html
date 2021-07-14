@@ -14,51 +14,51 @@
         
         <div class="form-group">
             <label> watering</label>
-            <input type="text" class="form-control" id="insjoining" 
-             name="insjoining" [(ngModel)]="seedDetails.watering"/>
+            <input type="text" class="form-control" id="inssalary" 
+            name="inssalary" [(ngModel)]="seedDetails.watering"/>
         </div>
         <div class="form-group">
             <label> difficultyLevel</label>
-            <input type="text" class="form-control" id="insjoining" 
-             name="insjoining" [(ngModel)]="seedDetails.difficultyLevel"/>
+            <input type="text" class="form-control" id="inssalary" 
+            name="inssalary" [(ngModel)]="seedDetails.difficultyLevel"/>
         </div>
         
         <div class="form-group">
             <label> temparature</label>
-            <input type="text" class="form-control" id="insjoining" 
-             name="insjoining" [(ngModel)]="seedDetails.temparature"/>
+            <input type="text" class="form-control" id="inssalary" 
+            name="inssalary" [(ngModel)]="seedDetails.temparature"/>
         </div>
         
         <div class="form-group">
             <label>typeOfSeeds</label>
-            <input type="text" class="form-control" id="insjoining" 
-             name="insjoining" [(ngModel)]="seedDetails.typeOfSeeds"/>
+            <input type="text" class="form-control" id="inssalary" 
+            name="inssalary" [(ngModel)]="seedDetails.typeOfSeeds"/>
         </div>
         
         <div class="form-group">
             <label>seedsDescription</label>
-            <input type="text" class="form-control" id="insjoining" 
-             name="insjoining" [(ngModel)]="seedDetails.seedsDescription"/>
+            <input type="text" class="form-control" id="inssalary" 
+            name="inssalary" [(ngModel)]="seedDetails.seedsDescription"/>
         </div>
         <div class="form-group">
             <label> seedsStock</label>
-            <input type="text" class="form-control" id="insjoining" 
-             name="insjoining" [(ngModel)]="seedDetails.seedsStock"/>
+            <input type="text" class="form-control" id="inssalary" 
+            name="inssalary" [(ngModel)]="seedDetails.seedsStock"/>
         </div>
         <div class="form-group">
             <label>seedsCost</label>
-            <input type="text" class="form-control" id="insjoining" 
-             name="insjoining" [(ngModel)]="seedDetails.seedsCost"/>
+            <input type="text" class="form-control" id="inssalary" 
+            name="inssalary" [(ngModel)]="seedDetails.seedsCost"/>
         </div>
         <div class="form-group">
             <label>seedsPerPacket</label>
             <input type="text" class="form-control" id="insjoining" 
              name="insjoining" [(ngModel)]="seedDetails.seedsPerPacket"/>
         </div>
-        <div class="form-group">
+        <div class="form-group" enctype="multipart/form-data">
             <label>Image</label>
-            <input type="file" class="form-control" id="insjoining" 
-             name="insjoining"/>
+            <input type="file" class="form-control" accept="image/*" (change) = "onSelectFile($event)" style="height:100%"
+            />
         </div>
        
         <div class="card-footer text-muted">

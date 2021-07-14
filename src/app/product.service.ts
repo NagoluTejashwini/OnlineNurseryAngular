@@ -15,8 +15,12 @@ export class ProductService {
   private insertSeed_endpoint = this.address+'/onlinenursery/seed/add';
   private getAllSeed_endpoint = this.address+'/onlinenursery/seed/seeds';
   private getAllSeedByName_endpoint = this.address+'/onlinenursery/seed/commonName/';
+  private getAllSeedById_endpoint = this.address+'/onlinenursery/seed/';
   private getAllPlanter_endpoint = this.address+'/onlinenursery/planter/planters';
   private getAllPlant_endpoint = this.address+'/onlinenursery/plant/plants';
+  private getPlantByName_endpoint = this.address+'/onlinenursery/plant/commonName/';
+  private getPlantById_endpoint = this.address+'/onlinenursery/plant/';
+  private getPlanterById_endpoint = this.address+'/onlinenursery/planter/';
 
   constructor(private http:HttpClient) { }
 
@@ -26,13 +30,27 @@ export class ProductService {
     return this.http.get<SeedDetails[]>(`${this.getAllSeed_endpoint}`);
   }
 
-  getSeedByName(byName: string):Observable<SeedDetails>{
-    return this.http.get<SeedDetails>(`${this.getAllSeedByName_endpoint}/${byName}`);
+  getSeedById(bId: number):Observable<SeedDetails>{
+    return this.http.get<SeedDetails>(`${this.getAllSeedById_endpoint}/${bId}`);
+  }
+  
+  getPlantById(byId: number):Observable<PlantDetails>{
+    return this.http.get<PlantDetails>(`${this.getPlantById_endpoint}/${byId}`);
   }
 
-  insertSeed(seed:SeedDetails):Observable<SeedDetails>{
+  getPlanterById(byId: number):Observable<PlanterDetails>{
+    return this.http.get<PlanterDetails>(`${this.getPlanterById_endpoint}/${byId}`);
+  }
+
+  getPlantByName(byName: string):Observable<PlantDetails>{
+    return this.http.get<PlantDetails>(`${this.getPlantByName_endpoint}/${byName}`);
+  }
+
+  insertSeed(formData:FormData):Observable<any>{
+   // const headers = { 'content-type': 'multipart/form-data'} 
+    //const body=JSON.stringify(seed);
     console.log('Instructor Service - Create Seed called ');
-    return this.http.post<SeedDetails>(`${this.insertSeed_endpoint}`, seed);  
+    return this.http.post(`${this.insertSeed_endpoint}`, formData);  
   }
   
   getAllPlanterList():Observable<PlanterDetails[]>
